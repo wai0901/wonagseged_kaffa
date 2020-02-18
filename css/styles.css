@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+
+.nav-back {
+    background-color: rgba(0, 0, 0 , 0.8);
+}
+
+.nav-logo {
+    cursor: pointer;
+}
+
+.nav-text-li {
+    position: relative;
+}
+
+.nav-text-a {
+    font-size: .9rem;
+    padding-bottom: 0.3rem;
+}
+
+.nav-text-a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform .2s;
+}
+
+.nav-text-a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Header Section */
+
+.header-section {
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.header-bg-img {
+    height: 100%;
+    width: auto;
+    background-image: url(/img/Coffee-photo-iStock-664313320.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    z-index: -1;
+}
+
+.header-logo {
+    height: 45%;
+}
+
+.header-content {
+    height: 55%;
+}
+
+.header-content h1 {
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 5rem;
+    color: #fff;
+}
+
+.header-text-border {
+    width: 150px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255 , 0.2);
+}
+
+.header-content p {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Body Section */
+
+.body-section {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+.body-one-content {
+    position: absolute;
+    z-index: 1;
+}
+
+.body-one-bg {
+    /* position: absolute; */
+    padding: 0;
+    margin: 0;
+    height: 80vh;
+    width: 100%;
+    background-color: #efe3d9;
+}
+
+.body-one-bg{
+    background-image: url(/img/section_2_bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+/* .body-svg-bg, image {
+    padding: 0;
+} */
+
+/* Body Section Two */
+
+.body-two-bg {
+    padding: 0;
+    margin: 0;
+    height: 80vh;
+    width: 100%;
+    background-image: url(/img/coffee-friends-stock.jpg);
+}
+
+/* Body Section Three */
+
+.body-three-bg {
+    padding: 0;
+    margin: 0;
+    height: 80vh;
+    width: 100%;
+    background-image: url(/img/section_3_bg.jpg);
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #000;
+}
+
+.footer-bg {
+    height: 30vh;
+    width: 100%;
+}
