@@ -52,7 +52,8 @@ body {
 
 .header-bg-img {
     height: 100%;
-    width: auto;
+    width: 100%;
+    margin: 0;
     background-image: url(/img/Coffee-photo-iStock-664313320.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -96,6 +97,7 @@ body {
     height: 80vh;
     width: 100%;
     position: relative;
+    background-color: #e7dad3;
 }
 
 .body-one-content {
@@ -104,23 +106,39 @@ body {
 }
 
 .body-one-bg {
-    /* position: absolute; */
+    position: relative;
     padding: 0;
     margin: 0;
     height: 80vh;
     width: 100%;
-    background-color: #efe3d9;
+    overflow: hidden;
 }
 
-.body-one-bg{
-    background-image: url(/img/section_2_bg.svg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
+.gear-group {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-/* .body-svg-bg, image {
-    padding: 0;
-} */
+.gear {
+    margin: 150px auto 0;
+    width: 500px;
+    height: 500px;
+    background-image: url("../img/section_2_bg_gear.svg");
+    animation: gear1 linear infinite;
+    animation-duration: 80s;
+}
+
+@keyframes gear1 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.body-one-svg {
+    position: absolute;
+}
+
 
 /* Body Section Two */
 
