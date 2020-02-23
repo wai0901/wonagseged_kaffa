@@ -1,0 +1,32 @@
+{
+  "name": "wonagseged-kaffa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wai0901/wonagseged_kaffa.git"
+  },
+  "author": "Wai Leung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wai0901/wonagseged_kaffa/issues"
+  },
+  "homepage": "https://github.com/wai0901/wonagseged_kaffa#readme"
+}
