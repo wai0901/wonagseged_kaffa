@@ -44,7 +44,7 @@ h2 {
     height: 100vh;
     width: 100%;
     margin: 0;
-    background: url(img/Coffee-photo-iStock-664313320.jpg) no-repeat center center fixed;
+    background: url(/img/Coffee-photo-iStock-664313320.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -75,7 +75,7 @@ h2 {
         color: #fff; }
   .header-section .arrow-down {
     position: absolute;
-    left: 50%;
+    left: 45vw;
     bottom: 3rem;
     color: rgba(255, 255, 255, 0.6);
     transform: translateX(-50%, -50%);
@@ -98,7 +98,7 @@ h2 {
     .header-section .header-bg-img .header-logo-bg .header-logo {
       width: 180px; }
     .header-section .header-content h1 {
-      font-size: 3rem; }
+      font-size: 2.8rem; }
     .header-section .header-content .header-text-border {
       width: 110px; }
       .header-section .header-content .header-text-border p {
@@ -211,7 +211,7 @@ h2 {
         margin: 150px auto 0;
         width: 500px;
         height: 500px;
-        background-image: url("img/section_2_bg_gear.svg");
+        background-image: url("../img/section_2_bg_gear.svg");
         animation: gear1 linear infinite;
         animation-duration: 80s; }
 
@@ -230,7 +230,7 @@ h2 {
   margin: 0;
   height: 70vh;
   width: 100%;
-  background: url(img/coffee-friends-stock.jpg) no-repeat center center;
+  background: url(/img/coffee-friends-stock.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -260,9 +260,9 @@ h2 {
 .body-three-bg {
   padding: 0;
   margin: 0;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
-  background: url(img/section_3_bg.jpg) no-repeat center center;
+  background: url(/img/section_3_bg.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -329,40 +329,50 @@ h2 {
         .body-three-bg .anime-3-up .b-three-content button {
           margin: 0; } }
 
+@media screen and (max-width: 450px) {
+  .body-three-bg {
+    height: 120vh; } }
+
 /* Footer Section */
 footer {
   background-color: #000;
   height: 35vh;
   width: 100%; }
-  footer .bottom-link {
-    width: 100%; }
-    footer .bottom-link a {
-      color: #fff;
-      padding: 0 1rem;
-      font-size: 0.8rem; }
-    footer .bottom-link #newsletter-email {
-      width: 250px;
-      font-size: 0.8rem;
-      border: none;
-      border-radius: 8px;
-      text-align: center;
-      outline: none; }
-    footer .bottom-link label {
-      padding: 0 1rem;
-      color: #fff;
-      font-size: 0.7rem;
-      text-align: center; }
-  footer .social-icons {
-    width: 100%; }
-    footer .social-icons i {
-      color: #fff;
-      padding: 0 1rem;
-      font-size: 1.5rem; }
-  footer p {
-    font-size: 0.6rem;
-    color: #fff;
-    margin: 6rem auto 0;
-    padding-right: 1.5rem; }
+  footer .footer-container {
+    padding: 0; }
+    footer .footer-container .bottom-link {
+      width: 100%; }
+      footer .footer-container .bottom-link a {
+        color: #fff;
+        padding: 0 1rem;
+        font-size: 0.8rem; }
+      footer .footer-container .bottom-link #newsletter-email {
+        width: 250px;
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        outline: none; }
+      footer .footer-container .bottom-link label {
+        padding: 0 1rem;
+        color: #fff;
+        font-size: 0.7rem;
+        text-align: center; }
+    footer .footer-container .social-icons {
+      width: 100%;
+      background-color: #000; }
+      footer .footer-container .social-icons i {
+        color: #fff;
+        padding: 0 1rem;
+        font-size: 1.5rem; }
+    footer .footer-container .footer-copy-bg {
+      background-color: #000; }
+      footer .footer-container .footer-copy-bg p {
+        font-size: 0.6rem;
+        color: #fff; }
+    @media screen and (min-width: 992px) {
+      footer .footer-container .footer-copy-bg p {
+        padding-top: 100px; } }
 
 .sub-header-bg {
   position: relative;
@@ -371,7 +381,7 @@ footer {
   z-index: -1; }
   .sub-header-bg .sub-bg-container {
     height: 100%;
-    background: url(img/Coffee-photo-iStock-664313320.jpg) no-repeat center center;
+    background: url(/img/Coffee-photo-iStock-664313320.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -454,7 +464,9 @@ footer {
       font-size: 0.7rem;
       line-height: 1.6rem; }
     .ok-body-bg .ok-body img {
-      width: 160px; } }
+      width: 160px; }
+    .ok-body-bg .ok-body-top img {
+      margin-top: 0; } }
 
 .buy-bg {
   height: auto;
@@ -531,7 +543,7 @@ footer {
 
 .as-bg-img {
   height: 40vh;
-  background: url(img/farm.png) no-repeat left center;
+  background: url(/img/farm.png) no-repeat left center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
