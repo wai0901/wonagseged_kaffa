@@ -1,0 +1,572 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e7dad3; }
+
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+/* Navbar */
+.nav-back {
+  background-color: #201c19; }
+  .nav-back .nav-logo {
+    cursor: pointer; }
+  .nav-back .nav-text-li {
+    position: relative; }
+    .nav-back .nav-text-li .nav-text-a {
+      font-size: .9rem;
+      padding-bottom: 0.3rem; }
+    .nav-back .nav-text-li .nav-text-a::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transform-origin: bottom right;
+      transition: transform .2s; }
+    .nav-back .nav-text-li .nav-text-a:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left; }
+
+/* Header Section */
+.header-section {
+  padding: 0;
+  height: auto;
+  width: 100%; }
+  .header-section .header-bg-img {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background: url(/img/Coffee-photo-iStock-664313320.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1; }
+    .header-section .header-bg-img .header-logo-bg {
+      height: 45%; }
+      .header-section .header-bg-img .header-logo-bg .header-logo {
+        width: 260px;
+        margin-bottom: 1rem; }
+  .header-section .header-content {
+    height: 55%; }
+    .header-section .header-content h1 {
+      margin: 2rem 0 1rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 5rem;
+      color: #fff; }
+    .header-section .header-content .header-text-border {
+      width: 150px;
+      border: 1px solid #fff;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.2); }
+      .header-section .header-content .header-text-border p {
+        margin: 0;
+        padding-bottom: 5px;
+        font-size: 1.2rem;
+        color: #fff; }
+  .header-section .arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    color: rgba(255, 255, 255, 0.6);
+    transform: translateX(-50%, -50%);
+    font-size: 4rem;
+    animation: scroll-down 1s 0.6s ease-in-out infinite; }
+
+@keyframes scroll-down {
+  from {
+    transform: translatey(-20px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+  @media screen and (max-width: 850px) {
+    .header-section .header-bg-img .header-logo-bg .header-logo {
+      width: 230px; }
+    .header-section .header-content h1 {
+      font-size: 4rem; } }
+  @media screen and (max-width: 600px) {
+    .header-section .header-bg-img .header-logo-bg .header-logo {
+      width: 180px; }
+    .header-section .header-content h1 {
+      font-size: 3rem; }
+    .header-section .header-content .header-text-border {
+      width: 110px; }
+      .header-section .header-content .header-text-border p {
+        padding-bottom: 2px;
+        font-size: 0.8rem; } }
+
+/* Body Section */
+.body-section {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  background-color: #e7dad3; }
+  .body-section .body-one-group {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1; }
+    .body-section .body-one-group .row {
+      position: relative;
+      margin: 0 auto;
+      height: 100vh;
+      width: 90%;
+      align-items: center;
+      text-align: center; }
+      .body-section .body-one-group .row .b-one-content {
+        width: 100%;
+        padding: 0; }
+        .body-section .body-one-group .row .b-one-content .ethiopia-map {
+          width: 400px;
+          margin-top: -10rem;
+          opacity: 0;
+          animation: none; }
+        .body-section .body-one-group .row .b-one-content .africa-faces {
+          width: 350px;
+          margin-top: -5rem;
+          opacity: 0; }
+      .body-section .body-one-group .row .b-one-center {
+        text-align: left;
+        margin-bottom: 60px;
+        opacity: 0; }
+        .body-section .body-one-group .row .b-one-center p {
+          line-height: 2rem; }
+        .body-section .body-one-group .row .b-one-center a {
+          border: 3px solid #555; }
+      @media screen and (max-width: 1250px) {
+        .body-section .body-one-group .row .b-one-content .ethiopia-map {
+          width: 300px; }
+        .body-section .body-one-group .row .b-one-content .africa-faces {
+          width: 270px; } }
+      @media screen and (max-width: 992px) {
+        .body-section .body-one-group .row .b-one-content .ethiopia-map {
+          margin-top: -5rem;
+          width: 220px; }
+        .body-section .body-one-group .row .b-one-content .africa-faces {
+          margin-top: -2rem;
+          width: 200px; }
+        .body-section .body-one-group .row .b-one-center {
+          margin-top: -250px; } }
+      @media screen and (max-width: 576px) {
+        .body-section .body-one-group .row .b-one-content {
+          width: 50%; }
+          .body-section .body-one-group .row .b-one-content .ethiopia-map {
+            margin-top: -5rem;
+            width: 160px; }
+          .body-section .body-one-group .row .b-one-content .africa-faces {
+            margin-top: -4rem;
+            width: 150px; }
+        .body-section .body-one-group .row .b-one-center h2 {
+          font-size: 1.8rem; }
+        .body-section .body-one-group .row .b-one-center p {
+          font-size: 0.8rem;
+          line-height: 1.5rem; } }
+
+@keyframes anime-left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes anime-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes anime-right {
+  from {
+    transform: translateX(100px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+  .body-section .body-one-bg {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; }
+    .body-section .body-one-bg .gear-group {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%, 0); }
+      .body-section .body-one-bg .gear-group .gear {
+        margin: 150px auto 0;
+        width: 500px;
+        height: 500px;
+        background-image: url("../img/section_2_bg_gear.svg");
+        animation: gear1 linear infinite;
+        animation-duration: 80s; }
+
+@keyframes gear1 {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+    .body-section .body-one-bg .body-one-svg {
+      position: absolute; }
+
+/* Body Section Two */
+.body-two-bg {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 70vh;
+  width: 100%;
+  background: url(/img/coffee-friends-stock.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .body-two-bg .b-two-content {
+    width: 50%;
+    text-align: center;
+    margin: auto 0; }
+    .body-two-bg .b-two-content h2 {
+      margin-bottom: 2rem;
+      color: #fff;
+      opacity: 0; }
+    .body-two-bg .b-two-content p {
+      margin: 0 25%;
+      color: #fff;
+      line-height: 3rem;
+      opacity: 0; }
+    @media screen and (max-width: 768px) {
+      .body-two-bg .b-two-content h2 {
+        font-size: 2.2rem; }
+      .body-two-bg .b-two-content p {
+        margin: 0 10%;
+        line-height: 2.2rem;
+        font-size: 0.8rem; } }
+
+/* Body Section Three */
+.body-three-bg {
+  padding: 0;
+  margin: 0;
+  height: 90vh;
+  width: 100%;
+  background: url(/img/section_3_bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center; }
+  .body-three-bg .b-three-img {
+    margin: auto 0;
+    left: 0rem;
+    top: 0rem; }
+    .body-three-bg .b-three-img img {
+      width: 70%;
+      opacity: 0; }
+  .body-three-bg .anime-3-up {
+    margin-top: 5rem;
+    opacity: 0; }
+    .body-three-bg .anime-3-up .coffee-pot {
+      width: 300px;
+      margin: 6rem 3rem 0 0; }
+    .body-three-bg .anime-3-up .b-three-content {
+      text-align: left; }
+      .body-three-bg .anime-3-up .b-three-content p {
+        padding: 1rem 15%;
+        line-height: 2rem; }
+      .body-three-bg .anime-3-up .b-three-content button {
+        margin-left: 15%;
+        border: 3px solid #555; }
+        .body-three-bg .anime-3-up .b-three-content button a {
+          color: #000; }
+  @media screen and (max-width: 1200px) {
+    .body-three-bg .b-three-img img {
+      width: 90%; }
+    .body-three-bg .anime-3-up {
+      margin-top: 9rem; }
+      .body-three-bg .anime-3-up .coffee-pot {
+        width: 220px;
+        margin: 3rem 3rem 0 0; }
+      .body-three-bg .anime-3-up .b-three-content p {
+        padding: 1rem 8%;
+        line-height: 1.7rem;
+        font-size: 0.9rem; }
+      .body-three-bg .anime-3-up .b-three-content button {
+        margin-left: 8%; } }
+  @media screen and (max-width: 992px) {
+    .body-three-bg .b-three-img {
+      margin: 0 auto;
+      left: none;
+      top: 20px;
+      height: 50%;
+      width: 100%; }
+      .body-three-bg .b-three-img img {
+        height: 90%;
+        width: auto; }
+    .body-three-bg .anime-3-up {
+      margin-top: -2rem; }
+      .body-three-bg .anime-3-up .coffee-pot {
+        width: 180px;
+        margin: 0; }
+      .body-three-bg .anime-3-up .b-three-content {
+        text-align: center; }
+        .body-three-bg .anime-3-up .b-three-content p {
+          padding: 1rem 9% 0;
+          line-height: 1.5rem;
+          font-size: 0.9rem; }
+        .body-three-bg .anime-3-up .b-three-content button {
+          margin: 0; } }
+
+/* Footer Section */
+footer {
+  background-color: #000;
+  height: 35vh;
+  width: 100%; }
+  footer .bottom-link {
+    width: 100%; }
+    footer .bottom-link a {
+      color: #fff;
+      padding: 0 1rem;
+      font-size: 0.8rem; }
+    footer .bottom-link #newsletter-email {
+      width: 250px;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      outline: none; }
+    footer .bottom-link label {
+      padding: 0 1rem;
+      color: #fff;
+      font-size: 0.7rem;
+      text-align: center; }
+  footer .social-icons {
+    width: 100%; }
+    footer .social-icons i {
+      color: #fff;
+      padding: 0 1rem;
+      font-size: 1.5rem; }
+  footer p {
+    font-size: 0.6rem;
+    color: #fff;
+    margin: 6rem auto 0;
+    padding-right: 1.5rem; }
+
+.sub-header-bg {
+  position: relative;
+  right: 0;
+  height: 30vh;
+  z-index: -1; }
+  .sub-header-bg .sub-bg-container {
+    height: 100%;
+    background: url(/img/Coffee-photo-iStock-664313320.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .sub-header-bg .sub-bg-container .sub-header {
+      height: 100%;
+      width: 80%; }
+      .sub-header-bg .sub-bg-container .sub-header .col h2 {
+        margin: 0 0 20px 20%;
+        color: #fff; }
+
+.ok-body-bg {
+  position: relative;
+  background-color: #e7dad3;
+  text-align: center;
+  z-index: -1; }
+  .ok-body-bg .ok-body {
+    align-items: center;
+    margin: 0 auto;
+    height: 60vh;
+    width: 70%; }
+    .ok-body-bg .ok-body p {
+      font-size: 0.9rem;
+      text-align: left;
+      line-height: 2rem;
+      margin: -20% 0 0 0; }
+    .ok-body-bg .ok-body img {
+      height: auto;
+      width: 300px;
+      margin: -45% 0 0 0; }
+  .ok-body-bg .ok-body-top {
+    height: 70vh; }
+  .ok-body-bg .ok-body-bottom p {
+    margin-left: 5%; }
+  .ok-body-bg .ok-body-bottom img {
+    margin-left: -10%; }
+  .ok-body-bg .skew-background:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 70%;
+    width: 100%;
+    top: 45%;
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+    -o-transform: skewY(-4deg);
+    transform: skewY(-4deg);
+    background-color: #c9b0a4; }
+  @media screen and (max-width: 1250px) {
+    .ok-body-bg .ok-body p {
+      font-size: 0.8rem; }
+    .ok-body-bg .ok-body img {
+      width: 280px; } }
+  @media screen and (max-width: 992px) {
+    .ok-body-bg .ok-body {
+      width: 85%; }
+      .ok-body-bg .ok-body p {
+        margin: 0;
+        line-height: 1.8rem; }
+      .ok-body-bg .ok-body img {
+        margin: 0;
+        width: 230px; }
+    .ok-body-bg .ok-body-top {
+      align-items: flex-start;
+      height: 900px; }
+      .ok-body-bg .ok-body-top p {
+        margin: -260px 0 0 0; }
+      .ok-body-bg .ok-body-top img {
+        margin-top: 2rem; }
+    .ok-body-bg .ok-body-bottom {
+      align-items: flex-;
+      height: 700px; }
+      .ok-body-bg .ok-body-bottom p {
+        margin: -45% 0 0 0; }
+      .ok-body-bg .ok-body-bottom img {
+        margin: -40% 0 0 0; } }
+  @media screen and (max-width: 650px) {
+    .ok-body-bg .ok-body p {
+      font-size: 0.7rem;
+      line-height: 1.6rem; }
+    .ok-body-bg .ok-body img {
+      width: 160px; } }
+
+.buy-bg {
+  height: auto;
+  width: 80%; }
+  .buy-bg .buy-top {
+    margin: 50px auto 100px; }
+    .buy-bg .buy-top .buy-top-left {
+      margin: auto 0; }
+      .buy-bg .buy-top .buy-top-left img {
+        display: block;
+        margin: 0 auto;
+        width: 500px; }
+    .buy-bg .buy-top .buy-top-right {
+      margin: auto 0; }
+      .buy-bg .buy-top .buy-top-right h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem; }
+      .buy-bg .buy-top .buy-top-right h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase; }
+      .buy-bg .buy-top .buy-top-right ul {
+        padding: 20px 0;
+        list-style-type: none; }
+        .buy-bg .buy-top .buy-top-right ul li {
+          padding: 5px 0;
+          font-size: 0.8rem; }
+      .buy-bg .buy-top .buy-top-right .buy-btn-group {
+        display: flex; }
+        .buy-bg .buy-top .buy-top-right .buy-btn-group .buy-btn {
+          padding-right: 20px; }
+  .buy-bg .buy-center {
+    margin: 0 auto;
+    position: relative; }
+    .buy-bg .buy-center h3 {
+      margin-left: 15px;
+      font-size: 1.3rem;
+      font-weight: bold; }
+    .buy-bg .buy-center p {
+      margin-left: 15px;
+      padding-top: 10px;
+      font-size: 0.8rem;
+      line-height: 1.5rem; }
+  .buy-bg .buy-bottom {
+    margin: 100px 0; }
+    .buy-bg .buy-bottom .buy-bottom-cards {
+      display: block;
+      margin: 0 auto; }
+      .buy-bg .buy-bottom .buy-bottom-cards .card {
+        border: none;
+        margin: 20px auto; }
+      .buy-bg .buy-bottom .buy-bottom-cards img {
+        width: 100%; }
+      .buy-bg .buy-bottom .buy-bottom-cards h5 {
+        font-size: 1rem;
+        font-weight: bold; }
+      .buy-bg .buy-bottom .buy-bottom-cards p {
+        font-size: 0.8rem;
+        line-height: 1.5rem; }
+  @media screen and (max-width: 1200px) {
+    .buy-bg {
+      width: 90%; }
+      .buy-bg .buy-top .buy-top-left img {
+        width: 450px; } }
+  @media screen and (max-width: 992px) {
+    .buy-bg .buy-top {
+      padding-bottom: 100px;
+      border-bottom: 1px solid #ccc; }
+      .buy-bg .buy-top .buy-top-left img {
+        margin-bottom: 30px; } }
+  @media screen and (max-width: 576px) {
+    .buy-bg .buy-top .buy-top-left img {
+      width: 100%; } }
+
+.as-bg-img {
+  height: 40vh;
+  background: url(/img/farm.png) no-repeat left center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.as-contents {
+  margin: 5% 20%; }
+  .as-contents p {
+    font-size: 0.9rem;
+    line-height: 2rem; }
+
+.cu-body {
+  height: 40vh;
+  width: 70%;
+  margin: 6% auto; }
+  .cu-body .cu-body-contents {
+    margin: 0 auto;
+    padding: 0; }
+    .cu-body .cu-body-contents .items {
+      width: 100%; }
+      .cu-body .cu-body-contents .items .item {
+        font-size: 0.8rem;
+        padding-bottom: 5px; }
+        .cu-body .cu-body-contents .items .item i {
+          padding-right: 3px; }
+    .cu-body .cu-body-contents h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding-bottom: 0.5rem; }
+    .cu-body .cu-body-contents input, .cu-body .cu-body-contents textarea {
+      font-size: 0.8rem; }
+  @media screen and (max-width: 1200px) {
+    .cu-body {
+      width: 90%; } }
+  @media screen and (max-width: 768px) {
+    .cu-body {
+      height: 70vh;
+      width: 80%; } }
