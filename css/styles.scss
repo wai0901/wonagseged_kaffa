@@ -1,17 +1,42 @@
 $white: #fff;
 $black: #000;
+$backgroundColor: #e7dad3;
+$AangleBgColor: #c9b0a4;
+$navbarColor: rgb(32, 28, 25);
+
+@mixin background-cover {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin sub-page-skew-bg {
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+    -o-transform: skewY(-4deg);
+    transform: skewY(-4deg);
+}
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    background-color: $backgroundColor;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 /* Navbar */
 
 .nav-back {
-    background-color: rgb(32, 28, 25);;
+    background-color: $navbarColor;
 
     .nav-logo {
         cursor: pointer;
@@ -58,10 +83,7 @@ body {
         width: 100%;
         margin: 0;
         background: url(/img/Coffee-photo-iStock-664313320.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        @include background-cover;
         z-index: -1;
 
         .header-logo-bg {
@@ -167,8 +189,7 @@ body {
     height: 90vh;
     width: 100%;
     position: relative;
-    background-color: #e7dad3;
-    // background-image: linear-gradient(#e7dad3 30%, #d6b29a 60%);
+    background-color: $backgroundColor;
 
     .body-one-group {
         position: absolute;
@@ -207,13 +228,11 @@ body {
                 margin-bottom: 60px;
                 opacity: 0;
 
-                h2 {
-                    font-size: 2.5rem;
-                    font-weight: 900;
-                }
-
                 p {
                     line-height: 2rem;
+                }
+                a{
+                    border: 3px solid #555;
                 }
             }
 
@@ -351,10 +370,8 @@ body {
     margin: 0;
     height: 70vh;
     width: 100%;
-    background-image: url(/img/coffee-friends-stock.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url(/img/coffee-friends-stock.jpg) no-repeat center center;
+    @include background-cover;
 
     .b-two-content {
         width: 50%;
@@ -363,8 +380,6 @@ body {
 
         h2 {
             margin-bottom: 2rem;
-            font-size: 3rem;
-            font-weight: 900;
             color: $white;
             opacity: 0;
         }
@@ -396,11 +411,9 @@ body {
     margin: 0;
     height: 90vh;
     width: 100%;
-    background-image: url(/img/section_3_bg.jpg);
-    background-size: cover;
+    background: url(/img/section_3_bg.jpg) no-repeat center center;
+    @include background-cover;
     text-align: center;
-    background-repeat: no-repeat;
-    background-position: center center;
 
     .b-three-img {
         margin: auto 0;
@@ -432,6 +445,10 @@ body {
     
             button {
                 margin-left: 15%;
+                border: 3px solid #555;
+                a {
+                    color: $black;
+                }
             }
         }
     }
@@ -544,4 +561,309 @@ footer {
         padding-right: 1.5rem;
     }
 }
+
+// Sub-Pages
+
+.sub-header-bg {
+    position: relative;
+    right: 0;
+    height: 30vh;
+    z-index: -1;
+    .sub-bg-container {
+        height: 100%;
+        background: url(/img/Coffee-photo-iStock-664313320.jpg) no-repeat center center;
+        @include background-cover;
+
+        .sub-header {
+            height: 100%;
+            width: 80%;
+            .col {
+                h2 {
+                    margin: 0 0 20px 20%;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+.ok-body-bg {
+    position: relative;
+    background-color: $backgroundColor;
+    text-align: center;
+    z-index: -1;
+
+    .ok-body {
+        align-items: center;
+        margin: 0 auto;
+        height: 60vh;
+        width: 70%;;
+        p {
+            font-size: 0.9rem;
+            text-align: left;
+            line-height: 2rem;
+            margin: -20% 0 0 0;
+        }
+        img {
+            height: auto;
+            width: 300px;
+            margin: -45% 0 0 0;
+            
+        }
+    }
+
+    .ok-body-top {
+        height: 70vh;
+    }
+
+    .ok-body-bottom {
+        p {
+            margin-left: 5%;
+        }
+        img {
+            margin-left: -10%;
+        }
+    }
+    
+    .skew-background:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 70%;
+        width: 100%;
+        top: 45%;
+        @include sub-page-skew-bg;
+        background-color: $AangleBgColor;
+    }
+
+    @media screen and (max-width: 1250px) {
+        .ok-body {
+            p {
+                font-size: 0.8rem;
+            }
+            img {
+                width: 280px;
+            }
+        } 
+    }
+    @media screen and (max-width: 992px) {
+        .ok-body {
+            width: 85%;
+            p {
+                margin:0;
+                line-height: 1.8rem;
+            }
+            img {
+                margin:0;
+                width: 230px;
+            }
+        } 
+        .ok-body-top {
+            align-items: flex-start;
+            height: 900px;
+            p {
+                margin: -260px 0 0 0;
+            }
+            img {
+                margin-top: 2rem;
+            }
+        }
+        .ok-body-bottom {
+            align-items: flex-;
+            height: 700px;
+            p {
+                margin: -45% 0 0 0;
+            }
+            img {
+                margin: -40% 0 0 0;
+            }
+        }
+    }
+    @media screen and (max-width: 650px) {
+        .ok-body {
+            p {
+                font-size: 0.7rem;
+                line-height: 1.6rem;
+            }
+            img {
+                width: 160px;
+            }
+        }
+    }
+}
+
+// Buy Section
+
+.buy-bg {
+    height: auto;
+    width: 80%;
+    .buy-top {
+        margin: 50px auto 100px;
+        .buy-top-left {
+            margin: auto 0;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 500px;
+            }
+        }
+        .buy-top-right {
+            margin: auto 0;
+            h4 {
+                font-size: 1.3rem;
+                margin-bottom: 0.3rem;
+            }
+            h3 {
+                font-size: 2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            ul {
+                padding: 20px 0;
+                list-style-type: none;
+                li {
+                    padding: 5px 0;
+                    font-size: 0.8rem;
+                }
+            }
+            .buy-btn-group {
+                display: flex;
+                .buy-btn {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    .buy-center {
+        margin: 0 auto;
+        position: relative;
+        h3 {
+            margin-left: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        p {
+            margin-left: 15px;
+            padding-top: 10px;
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+        }
+        
+    }
+    .buy-bottom {
+        margin: 100px 0;
+        .buy-bottom-cards {
+            .card {
+                border: none;
+                margin: 20px auto;
+            }
+            img {
+                width: 100%;
+            }
+            display: block;
+            margin: 0 auto;
+            h5 {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            p {
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 90%;
+        .buy-top {
+            .buy-top-left {
+                img {
+                    width: 450px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .buy-top {
+            padding-bottom: 100px;
+            border-bottom: 1px solid #ccc;
+            .buy-top-left {
+                img {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .buy-top {
+            .buy-top-left {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
+
+// About us section
+
+.as-bg-img {
+    height: 40vh;
+    background: url(/img/farm.png) no-repeat left center;
+    @include background-cover;
+}
+
+.as-contents {
+    margin: 5% 20%;
+    p {
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+}
+
+// Contact us
+
+.cu-body {
+    height: 40vh;
+    width: 70%;
+    margin: 6% auto;
+
+    .cu-body-contents {
+        margin: 0 auto;
+        padding: 0;
+        .items {
+            width: 100%;
+            .item {
+                font-size: 0.8rem;
+                padding-bottom: 5px;
+                i {
+                    padding-right: 3px;
+                }
+            }
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+        }
+        input, textarea{
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 90%;
+    }
+    
+    @media screen and (max-width: 768px) {
+        height: 70vh;
+        width: 80%;
+    }
+}
+
+
+
+
 
